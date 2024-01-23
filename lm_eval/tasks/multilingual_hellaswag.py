@@ -52,7 +52,7 @@ class HellaSwag(MultipleChoiceTask):
         self.lang = lang
         self.DATASET_NAME = f"hellaswag_{lang}"
         self.DATASET_PATH = 'datasets/m_hellaswag'
-        self.NUM_FEW_SHOT = 0
+        self.NUM_FEW_SHOT = 10
         super().__init__(**kwargs)
 
 
