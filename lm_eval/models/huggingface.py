@@ -171,6 +171,7 @@ class HuggingFaceAutoLM(BaseLM):
             trust_remote_code=trust_remote_code,
             revision=revision + ("/" + subfolder if subfolder is not None else ""),
         )
+        self._config.max_position_embeddings = 2048
 
         self._add_special_tokens = add_special_tokens
         self.tokenizer = self._create_auto_tokenizer(
